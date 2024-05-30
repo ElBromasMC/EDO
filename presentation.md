@@ -138,9 +138,20 @@ Si a, b y c son diferentes y x(0)=0, resolver la EDO
 
 ### Desarrollo
 
-$$\begin{split}
-\dfrac{dx}{(a-x)(b-x)(c-x)} = k dt \\
-\end{split}$$
+Si $a \neq b \neq c:$
+$$\dfrac{dx}{(a-x)(b-x)(c-x)} = k dt$$
+$$\Longrightarrow \int \left[ \dfrac{\dfrac{1}{(b-a)(c-a)}}{a-x} + \dfrac{\dfrac{1}{(a-b)(c-b)}}{b-x} + \dfrac{\dfrac{1}{(a-c)(b-c)}}{c-x}\right] dx = \int kdt$$
+$$\Longrightarrow -\dfrac{1}{(b-a)(c-a)}\ln{(a-x)}-\dfrac{1}{(a-b)(c-b)}\ln{(b-x)}-\dfrac{1}{(a-c)(b-c)}\ln{(c-x)} = kt + C_1$$
+$$\Longrightarrow (b-c)\ln{(a-x)} + (c-a)\ln{(b-x)} + (a-b)\ln{(c-x)} = kt + C_1$$
+$$\Longrightarrow \ln{[(a-x)^{b-c}(b-x)^{c-a}(c-x)^{a-b}]} = kt+C_1$$
+$$\Longrightarrow (a-x)^{b-c}(b-x)^{c-a}(c-x)^{a-b} = Ce^{kt}$$
+
+---
+
+###
+
+Si $x(0)=0\Longrightarrow C=a^{b-c}b^{c-a}c^{a-b}$
+$$\Longrightarrow (a-x)^{b-c}(b-x)^{c-a}(c-x)^{a-b} = a^{b-c}b^{c-a}c^{a-b} e^{kt}$$
 
 # Gracias por su atención
 
